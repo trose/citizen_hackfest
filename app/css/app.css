@@ -1,0 +1,41 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+  background-color: ;
+}
+#email: {
+	padding-bottom: 10px;
+}
+#error {
+	color: red;
+	text-align: center;
+	font-family: "Proxima Nova",proxima-nova,"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+#fullName {
+	font-size: x-large;
+	color: #6ec910;
+	margin: 10px;
+	text-align: center;
+	font-family: "Proxima Nova",proxima-nova,"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.outerCenter {
+    float: right;
+    right: 50%;
+    position: relative;
+}
+.innerCenter {
+    float: right;
+    right: -50%;
+    position: relative;
+}
+.clear {
+	clear: both;
+	height: 100px;
+}
+.socialImage {
+	margin-top: 10px;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+}

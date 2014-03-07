@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Social Profiles</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="PhoneListCtrl">
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="outerCenter">
+      <form class="innerCenter" ng-submit="runQuery(query)">
+        <input placeholder="email" ng-model="query">
+        <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+      </form>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div id="error" ng-if="error">
+      {{error}}
+    </div>
+    <div id="fullName" ng-if="data.contactInfo.fullName">
+      {{data.contactInfo.fullName}}
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="outerCenter" ng-repeat="photo in data.photos">
+      <div class="innerCenter" id="image" ng-if="photo.isPrimary">
+        <img ng-src="{{photo.url}}">
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="outerCenter">
+      <div class="innerCenter">
+        <div ng-if="profiles.facebook" class="socialImage">
+          <a target="_blank" href="{{profiles.facebook}}">
+            <img src="img/facebook.png">
+          </a>
+        </div>
+        <div ng-if="profiles.linkedin" class="socialImage">
+          <a target="_blank" href="{{profiles.linkedin}}">
+            <img src="img/linkedin.png">
+          </a>
+        </div>
+        <div ng-if="profiles.googleprofile" class="socialImage">
+          <a target="_blank" href="{{profiles.googleprofile}}">
+            <img src="img/google.png">
+          </a>
+        </div>
+        <div ng-if="profiles.twitter" class="socialImage">
+          <a target="_blank" href="{{profiles.twitter}}">
+            <img src="img/twitter.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
